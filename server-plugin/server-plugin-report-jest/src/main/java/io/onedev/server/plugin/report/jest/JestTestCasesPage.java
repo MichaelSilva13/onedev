@@ -83,6 +83,9 @@ public class JestTestCasesPage extends JestTestReportPage {
 
 		@Override
 		protected List<TestCase> load() {
+
+			System.out.println("Started Load");
+
 			if (filePatterns != null && namePatterns != null)
 				return getReportData().getTestCases(filePatterns.orNull(), namePatterns.orNull(), state.statuses);
 			else
